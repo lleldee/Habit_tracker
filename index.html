@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="home">
+        <div class="home-content">
+            <h1>Welcome to Habit Tracker</h1>
+            <button id="startTracking">Start Habit Tracking</button>
+        </div>
+    </div>
+    <div id="app" style="display: none;">
+        <div class="mindful-tracker">
+            <div class="tracker-main">
+                <h1>Habit Tracker 2024</h1>
+                <div class="add-habit-form">
+                    <form id="addHabitForm">
+                        <input type="text" id="newHabit" placeholder="Enter habit here" required>
+                        <input type="number" id="habitGoal" placeholder="Set goal" min="1" required>
+                        <select id="goalFrequency" required>
+                            <option value="" disabled selected>Select frequency</option>
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                        </select>
+                        <button type="submit">Add Habit</button>
+                    </form>
+                </div>
+                <div id="habit-view-container"></div>
+                <div class="view-controls">
+                    <button class="view-btn" data-view="week">Weekly View</button>
+                </div>
+                <div class="main-content">
+                    <div id="weekly-view-container"></div>
+                    <div id="weekly-summary-container"></div>
+                </div>
+            </div>
+            <div id="monthly-stats-container"></div>
+        </div>
+    </div>
+    <script type="module" src="src/main.ts"></script>
+</body>
+</html>
